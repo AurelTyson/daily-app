@@ -13,6 +13,8 @@ public final class Item: Codable {
     
     public var uuid: UUID?
     public var title: String?
+    public var createdAt: Date?
+    public var order: Int?
     
     // MARK: Init
     

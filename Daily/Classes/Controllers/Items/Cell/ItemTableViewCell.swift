@@ -13,6 +13,11 @@ public final class ItemTableViewCell: UITableViewCell {
     
     @IBOutlet private weak var titleTextField: UITextField!
     
+    // MARK: Attributes
+    
+    private var currentItem: Item?
+    public var didEndEditingItem: ((Item) -> Void)?
+    
     // MARK: TableViewCell
     
     override public func awakeFromNib() {
@@ -20,6 +25,13 @@ public final class ItemTableViewCell: UITableViewCell {
         
         // Cell
         self.selectionStyle = .none
+        
+        // Title
+        self.titleTextField.delegate = self
+        
+        // Reset data
+        self.currentItem = nil
+        self.didEndEditingItem = nil
         
     }
     
@@ -31,8 +43,30 @@ public final class ItemTableViewCell: UITableViewCell {
     
     public func configure(item: Item) {
         
+        // Save item
+        self.currentItem = item
+        
         // Title
         self.titleTextField.text = item.title ?? ""
+        
+    }
+    
+}
+
+extension ItemTableViewCell: UITextFieldDelegate {
+    
+    public func textFieldDidEndEditing(_ textField: UITextField) {
+        
+        // Get item
+        guard let item = self.currentItem else {
+            return
+        }
+        
+        // Update title
+        item.title = textField.text
+        
+        // Save item
+        self.didEndEditingItem?(item)
         
     }
     
