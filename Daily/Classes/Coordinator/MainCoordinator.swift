@@ -20,6 +20,10 @@ public enum MainRoute: Route {
 
 public final class MainCoordinator: NavigationCoordinator<MainRoute> {
     
+    // MARK: Services
+    
+    private let itemsService = ItemsService.shared
+    
     // MARK: Init
     
     public init() {
@@ -38,7 +42,8 @@ public final class MainCoordinator: NavigationCoordinator<MainRoute> {
         
         case .items:
             let vc = ItemsViewController.instantiateFromNib()
-            let vm = ItemsViewModel(router: self.unownedRouter)
+            let vm = ItemsViewModel(router: self.unownedRouter,
+                                    itemsService: self.itemsService)
             vc.bind(to: vm)
             return .push(vc)
             

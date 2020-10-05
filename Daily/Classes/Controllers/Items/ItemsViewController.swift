@@ -23,6 +23,7 @@ public final class ItemsViewController: UIViewController, BindableType {
     
     // MARK: Graphic attributes
     
+    @IBOutlet private weak var addItemButton: UIButton!
     @IBOutlet private weak var tableView: UITableView!
     
     // MARK: Attributes
@@ -49,8 +50,21 @@ public final class ItemsViewController: UIViewController, BindableType {
     
     public func bindViewModel() {
         
+        // Refresh
+        self.viewModel
+            .refreshTrigger
+            .subscribe { [weak self] _ in
+                
+                // Reload tableView
+                self?.tableView.reloadData()
+                
+            }
+            .disposed(by: self.disposeBag)
+        
         // Input for viewModel
-        let input = ItemsViewModel.Input()
+        let input = ItemsViewModel.Input(
+            tapAddItem: self.addItemButton.rx.tap.asObservable()
+        )
         
         // Transform input to output
         let output = self.viewModel.transform(input: input)
@@ -86,6 +100,12 @@ extension ItemsViewController: UITableViewDataSource, UITableViewDelegate {
         
         // Configure
         cell.configure(item: self.viewModel.items[indexPath.row])
+        cell.didEndEditingItem = { [weak self] (item: Item) in
+            self?.viewModel.updateItem(item: item)
+        }
+        cell.didDeleteItem = { [weak self] (item: Item) in
+            self?.viewModel.deleteItem(item: item)
+        }
         
         // Return the configured cell
         return cell
