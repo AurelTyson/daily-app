@@ -103,6 +103,9 @@ extension ItemsViewController: UITableViewDataSource, UITableViewDelegate {
         cell.didEndEditingItem = { [weak self] (item: Item) in
             self?.viewModel.updateItem(item: item)
         }
+        cell.didDeleteItem = { [weak self] (item: Item) in
+            self?.viewModel.deleteItem(item: item)
+        }
         
         // Return the configured cell
         return cell

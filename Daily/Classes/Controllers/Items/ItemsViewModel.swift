@@ -107,4 +107,18 @@ public class ItemsViewModel {
         
     }
     
+    public func deleteItem(item: Item) {
+        
+        guard let uuid = item.uuid?.uuidString else {
+            return
+        }
+        
+        // Save item
+        self.itemsService.deleteItem(uuid: uuid)
+        
+        // Reload items
+        self.refreshItems()
+        
+    }
+    
 }
