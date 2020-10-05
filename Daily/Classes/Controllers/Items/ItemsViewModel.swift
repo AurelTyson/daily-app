@@ -22,6 +22,8 @@ public class ItemsViewModel {
     
     // MARK: Attributes
     
+    public var items = [Item]()
+    
     private let router: UnownedRouter<MainRoute>
     private let disposeBag = DisposeBag()
     
@@ -37,6 +39,12 @@ public class ItemsViewModel {
     // MARK: Transform
     
     public func transform(input: ItemsViewModel.Input) -> ItemsViewModel.Output {
+        
+        // Fake data
+        let fakeItem = Item()
+        fakeItem.uuid = UUID()
+        fakeItem.title = "Fake title"
+        self.items = [Item](repeating: fakeItem, count: 20)
         
         // Output
         return Output(
