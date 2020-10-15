@@ -26,6 +26,10 @@ public final class SideBarCoordinator: NavigationCoordinator<SideBarRoute> {
     
     public init() {
         super.init(initialRoute: .sideBar)
+        
+        // NavigationController configuration
+        self.rootViewController.navigationBar.isHidden = true
+        
     }
     
     // MARK: Overrides

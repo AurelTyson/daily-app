@@ -25,6 +25,7 @@
 		7434749E252BA2A800F6F141 /* DailyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7434749D252BA2A800F6F141 /* DailyTests.swift */; };
 		743474A9252BA2A800F6F141 /* DailyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743474A8252BA2A800F6F141 /* DailyUITests.swift */; };
 		74422C86253847F50084CE46 /* NotificationNameExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74422C85253847F50084CE46 /* NotificationNameExtension.swift */; };
+		74422C91253866420084CE46 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74422C90253866420084CE46 /* UIColorExtension.swift */; };
 		749CA0E3252BA392002ED035 /* ItemsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749CA0E2252BA392002ED035 /* ItemsCoordinator.swift */; };
 		749CA0EC252BA3FD002ED035 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749CA0EB252BA3FD002ED035 /* Item.swift */; };
 		749CA0F6252BA464002ED035 /* ItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749CA0F4252BA464002ED035 /* ItemsViewController.swift */; };
@@ -81,6 +82,7 @@
 		743474A8252BA2A800F6F141 /* DailyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyUITests.swift; sourceTree = "<group>"; };
 		743474AA252BA2A800F6F141 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		74422C85253847F50084CE46 /* NotificationNameExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationNameExtension.swift; sourceTree = "<group>"; };
+		74422C90253866420084CE46 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		749CA0D3252BA35F002ED035 /* Daily.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Daily.entitlements; sourceTree = "<group>"; };
 		749CA0E2252BA392002ED035 /* ItemsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsCoordinator.swift; sourceTree = "<group>"; };
 		749CA0EB252BA3FD002ED035 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
@@ -229,6 +231,7 @@
 			isa = PBXGroup;
 			children = (
 				74422C85253847F50084CE46 /* NotificationNameExtension.swift */,
+				74422C90253866420084CE46 /* UIColorExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -557,6 +560,7 @@
 				749CA106252BA4B6002ED035 /* BindableType.swift in Sources */,
 				749CA124252BA94E002ED035 /* ItemTableViewCell.swift in Sources */,
 				749CA12E252BABAA002ED035 /* ItemsService.swift in Sources */,
+				74422C91253866420084CE46 /* UIColorExtension.swift in Sources */,
 				741709ED2537037D009808B5 /* SideBarCoordinator.swift in Sources */,
 				749CA0EC252BA3FD002ED035 /* Item.swift in Sources */,
 				749CA0F6252BA464002ED035 /* ItemsViewController.swift in Sources */,

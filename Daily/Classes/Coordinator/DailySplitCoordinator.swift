@@ -39,7 +39,14 @@ public final class DailySplitCoordinator: SplitCoordinator<DailySplitRoute> {
         super.init(master: self.sideBarRouter,
                    detail: todoListsRouter)
         
+        // Save split coordinator
         sideBarCoordinator.splitCoordinator = self.unownedRouter
+        
+        // Configure SplitView
+        self.rootViewController.minimumPrimaryColumnWidth = 280
+        self.rootViewController.maximumPrimaryColumnWidth = 280
+        self.rootViewController.preferredPrimaryColumnWidth = 280
+        self.rootViewController.view.backgroundColor = .lightBlue
         
     }
     

@@ -12,6 +12,13 @@ import XCoordinator
 
 public class SideBarViewModel {
     
+    // MARK: Enums
+    
+    public enum SelectedEntry {
+        case todoLists
+        case calendar
+    }
+    
     // MARK: Input / Output
     
     public struct Input {
@@ -20,6 +27,7 @@ public class SideBarViewModel {
     }
     
     public struct Output {
+        let selectedEntry: Driver<SelectedEntry>
     }
     
     // MARK: Services
@@ -42,28 +50,50 @@ public class SideBarViewModel {
     
     public func transform(input: SideBarViewModel.Input) -> SideBarViewModel.Output {
         
-        // Todo lists
-        input.tapMenuButtonTodoLists
-            .subscribe { [weak self] _ in
+        // Outputs
+        let selectedEntry = BehaviorRelay<SelectedEntry>(value: .todoLists)
+        
+        // Selected entry
+        selectedEntry
+            .skip(1)
+            .subscribe { [weak self] (entry: SelectedEntry) in
                 
-                // Show todo lists
-                self?.router.trigger(.todoLists)
+                switch entry {
+                
+                case .todoLists:
+                    self?.router.trigger(.todoLists)
+                
+                case .calendar:
+                    self?.router.trigger(.calendar)
+                    
+                }
                 
             }
             .disposed(by: self.disposeBag)
         
-        // Calendar
+        // Tap todo lists
+        input.tapMenuButtonTodoLists
+            .subscribe { _ in
+                
+                // Show todo lists
+                selectedEntry.accept(.todoLists)
+                
+            }
+            .disposed(by: self.disposeBag)
+        
+        // Tap calendar
         input.tapMenuButtonCalendar
-            .subscribe { [weak self] _ in
+            .subscribe { _ in
                 
                 // Show calendar
-                self?.router.trigger(.calendar)
+                selectedEntry.accept(.calendar)
                 
             }
             .disposed(by: self.disposeBag)
         
         // Output
         return Output(
+            selectedEntry: selectedEntry.asDriver()
         )
         
     }
