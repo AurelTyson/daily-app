@@ -30,12 +30,12 @@ public class ItemsViewModel {
     public var refreshTrigger = PublishRelay<Void>()
     public var items = [Item]()
     
-    private let router: UnownedRouter<MainRoute>
+    private let router: UnownedRouter<ItemsRoute>
     private let disposeBag = DisposeBag()
     
     // MARK: Init
     
-    public init(router: UnownedRouter<MainRoute>,
+    public init(router: UnownedRouter<ItemsRoute>,
                 itemsService: ItemsService) {
         
         // Init

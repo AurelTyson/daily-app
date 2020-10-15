@@ -13,7 +13,7 @@ public final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     // MARK: Attributes
     
     public var window: UIWindow?
-    private let router = MainCoordinator().strongRouter
+    private let router = DailySplitCoordinator().strongRouter
     
     // MARK: UIWindowSceneDelegate
     

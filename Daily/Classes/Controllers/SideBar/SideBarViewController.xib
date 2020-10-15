@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17502"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SideBarViewController" customModule="Daily" customModuleProvider="target">
+            <connections>
+                <outlet property="menuButtonCalendar" destination="srt-CV-QCG" id="Zzb-cD-1EC"/>
+                <outlet property="menuButtonTodoLists" destination="YSi-Nx-Og3" id="VJu-s7-wcM"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Daily Dashboard" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VRZ-zs-kZQ">
+                    <rect key="frame" x="20" y="64" width="374" height="29"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="b9Z-Qf-wsz">
+                    <rect key="frame" x="20" y="113" width="374" height="100"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YSi-Nx-Og3">
+                            <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="Giw-VL-QLH"/>
+                            </constraints>
+                            <state key="normal" title="Lists"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="srt-CV-QCG">
+                            <rect key="frame" x="0.0" y="50" width="374" height="50"/>
+                            <state key="normal" title="Calendar"/>
+                        </button>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="b9Z-Qf-wsz" secondAttribute="trailing" constant="20" id="4WC-s5-1Vw"/>
+                <constraint firstItem="b9Z-Qf-wsz" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="OWf-SI-jHX"/>
+                <constraint firstItem="b9Z-Qf-wsz" firstAttribute="top" secondItem="VRZ-zs-kZQ" secondAttribute="bottom" constant="20" id="Tib-8Z-fjd"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="VRZ-zs-kZQ" secondAttribute="trailing" constant="20" id="cIt-UJ-Wz6"/>
+                <constraint firstItem="VRZ-zs-kZQ" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="fWo-4x-Xay"/>
+                <constraint firstItem="VRZ-zs-kZQ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="hah-GC-mRf"/>
+            </constraints>
+            <point key="canvasLocation" x="68" y="117"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

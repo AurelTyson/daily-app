@@ -9,13 +9,23 @@
 /* Begin PBXBuildFile section */
 		40DF6D1D9A4A8FE27E10EF4D /* Pods_Daily_DailyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82B9A20AB9D383357E7D7334 /* Pods_Daily_DailyUITests.framework */; };
 		732DE254704540B957647F28 /* Pods_Daily.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F50B7EB49C5FA836D08688A4 /* Pods_Daily.framework */; };
+		741709BA2536FA91009808B5 /* DailySplitCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741709B92536FA91009808B5 /* DailySplitCoordinator.swift */; };
+		741709C12536FCAB009808B5 /* SideBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741709BF2536FCAB009808B5 /* SideBarViewController.swift */; };
+		741709C22536FCAB009808B5 /* SideBarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 741709C02536FCAB009808B5 /* SideBarViewController.xib */; };
+		741709CA2536FCFD009808B5 /* SideBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741709C92536FCFD009808B5 /* SideBarViewModel.swift */; };
+		741709ED2537037D009808B5 /* SideBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741709EC2537037D009808B5 /* SideBarCoordinator.swift */; };
+		741709F7253705C1009808B5 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741709F5253705C1009808B5 /* CalendarViewController.swift */; };
+		741709F8253705C1009808B5 /* CalendarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 741709F6253705C1009808B5 /* CalendarViewController.xib */; };
+		741709FD253705E9009808B5 /* CalendarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741709FC253705E9009808B5 /* CalendarViewModel.swift */; };
+		74170A02253706A7009808B5 /* CalendarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74170A01253706A7009808B5 /* CalendarCoordinator.swift */; };
 		74347487252BA2A500F6F141 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74347486252BA2A500F6F141 /* AppDelegate.swift */; };
 		74347489252BA2A500F6F141 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74347488252BA2A500F6F141 /* SceneDelegate.swift */; };
 		74347490252BA2A800F6F141 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7434748F252BA2A800F6F141 /* Assets.xcassets */; };
 		74347493252BA2A800F6F141 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74347491252BA2A800F6F141 /* LaunchScreen.storyboard */; };
 		7434749E252BA2A800F6F141 /* DailyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7434749D252BA2A800F6F141 /* DailyTests.swift */; };
 		743474A9252BA2A800F6F141 /* DailyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743474A8252BA2A800F6F141 /* DailyUITests.swift */; };
-		749CA0E3252BA392002ED035 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749CA0E2252BA392002ED035 /* MainCoordinator.swift */; };
+		74422C86253847F50084CE46 /* NotificationNameExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74422C85253847F50084CE46 /* NotificationNameExtension.swift */; };
+		749CA0E3252BA392002ED035 /* ItemsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749CA0E2252BA392002ED035 /* ItemsCoordinator.swift */; };
 		749CA0EC252BA3FD002ED035 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749CA0EB252BA3FD002ED035 /* Item.swift */; };
 		749CA0F6252BA464002ED035 /* ItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749CA0F4252BA464002ED035 /* ItemsViewController.swift */; };
 		749CA0F7252BA464002ED035 /* ItemsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 749CA0F5252BA464002ED035 /* ItemsViewController.xib */; };
@@ -49,6 +59,15 @@
 		2161818E1BC501471E6243E8 /* Pods-Daily-DailyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Daily-DailyUITests.debug.xcconfig"; path = "Target Support Files/Pods-Daily-DailyUITests/Pods-Daily-DailyUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		3DDDE70812E0C2DF450526F0 /* Pods_DailyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DailyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B11EC802D391A53CA9274EC /* Pods-Daily.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Daily.release.xcconfig"; path = "Target Support Files/Pods-Daily/Pods-Daily.release.xcconfig"; sourceTree = "<group>"; };
+		741709B92536FA91009808B5 /* DailySplitCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailySplitCoordinator.swift; sourceTree = "<group>"; };
+		741709BF2536FCAB009808B5 /* SideBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarViewController.swift; sourceTree = "<group>"; };
+		741709C02536FCAB009808B5 /* SideBarViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SideBarViewController.xib; sourceTree = "<group>"; };
+		741709C92536FCFD009808B5 /* SideBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarViewModel.swift; sourceTree = "<group>"; };
+		741709EC2537037D009808B5 /* SideBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarCoordinator.swift; sourceTree = "<group>"; };
+		741709F5253705C1009808B5 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		741709F6253705C1009808B5 /* CalendarViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalendarViewController.xib; sourceTree = "<group>"; };
+		741709FC253705E9009808B5 /* CalendarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewModel.swift; sourceTree = "<group>"; };
+		74170A01253706A7009808B5 /* CalendarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCoordinator.swift; sourceTree = "<group>"; };
 		74347483252BA2A500F6F141 /* Daily.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Daily.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		74347486252BA2A500F6F141 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		74347488252BA2A500F6F141 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,8 +80,9 @@
 		743474A4252BA2A800F6F141 /* DailyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DailyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		743474A8252BA2A800F6F141 /* DailyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyUITests.swift; sourceTree = "<group>"; };
 		743474AA252BA2A800F6F141 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		74422C85253847F50084CE46 /* NotificationNameExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationNameExtension.swift; sourceTree = "<group>"; };
 		749CA0D3252BA35F002ED035 /* Daily.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Daily.entitlements; sourceTree = "<group>"; };
-		749CA0E2252BA392002ED035 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		749CA0E2252BA392002ED035 /* ItemsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsCoordinator.swift; sourceTree = "<group>"; };
 		749CA0EB252BA3FD002ED035 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		749CA0F4252BA464002ED035 /* ItemsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsViewController.swift; sourceTree = "<group>"; };
 		749CA0F5252BA464002ED035 /* ItemsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemsViewController.xib; sourceTree = "<group>"; };
@@ -131,6 +151,26 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		741709BE2536FC97009808B5 /* SideBar */ = {
+			isa = PBXGroup;
+			children = (
+				741709BF2536FCAB009808B5 /* SideBarViewController.swift */,
+				741709C02536FCAB009808B5 /* SideBarViewController.xib */,
+				741709C92536FCFD009808B5 /* SideBarViewModel.swift */,
+			);
+			path = SideBar;
+			sourceTree = "<group>";
+		};
+		741709F4253705B0009808B5 /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				741709F5253705C1009808B5 /* CalendarViewController.swift */,
+				741709F6253705C1009808B5 /* CalendarViewController.xib */,
+				741709FC253705E9009808B5 /* CalendarViewModel.swift */,
+			);
+			path = Calendar;
+			sourceTree = "<group>";
+		};
 		7434747A252BA2A500F6F141 = {
 			isa = PBXGroup;
 			children = (
@@ -185,11 +225,20 @@
 			path = DailyUITests;
 			sourceTree = "<group>";
 		};
+		74422C84253847E20084CE46 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				74422C85253847F50084CE46 /* NotificationNameExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		749CA0DD252BA374002ED035 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
 				749CA0F3252BA44A002ED035 /* Controllers */,
 				749CA0DE252BA37A002ED035 /* Coordinator */,
+				74422C84253847E20084CE46 /* Extensions */,
 				749CA0EA252BA3EE002ED035 /* Models */,
 				749CA12C252BAB92002ED035 /* Services */,
 				749CA104252BA4A6002ED035 /* Utils */,
@@ -200,7 +249,10 @@
 		749CA0DE252BA37A002ED035 /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
-				749CA0E2252BA392002ED035 /* MainCoordinator.swift */,
+				74170A01253706A7009808B5 /* CalendarCoordinator.swift */,
+				741709B92536FA91009808B5 /* DailySplitCoordinator.swift */,
+				749CA0E2252BA392002ED035 /* ItemsCoordinator.swift */,
+				741709EC2537037D009808B5 /* SideBarCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -216,7 +268,9 @@
 		749CA0F3252BA44A002ED035 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				741709F4253705B0009808B5 /* Calendar */,
 				749CA100252BA488002ED035 /* Items */,
+				741709BE2536FC97009808B5 /* SideBar */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -366,7 +420,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				741709C22536FCAB009808B5 /* SideBarViewController.xib in Resources */,
 				749CA125252BA94E002ED035 /* ItemTableViewCell.xib in Resources */,
+				741709F8253705C1009808B5 /* CalendarViewController.xib in Resources */,
 				74347493252BA2A800F6F141 /* LaunchScreen.storyboard in Resources */,
 				749CA0F7252BA464002ED035 /* ItemsViewController.xib in Resources */,
 				74347490252BA2A800F6F141 /* Assets.xcassets in Resources */,
@@ -497,15 +553,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				741709F7253705C1009808B5 /* CalendarViewController.swift in Sources */,
 				749CA106252BA4B6002ED035 /* BindableType.swift in Sources */,
 				749CA124252BA94E002ED035 /* ItemTableViewCell.swift in Sources */,
 				749CA12E252BABAA002ED035 /* ItemsService.swift in Sources */,
+				741709ED2537037D009808B5 /* SideBarCoordinator.swift in Sources */,
 				749CA0EC252BA3FD002ED035 /* Item.swift in Sources */,
 				749CA0F6252BA464002ED035 /* ItemsViewController.swift in Sources */,
-				749CA0E3252BA392002ED035 /* MainCoordinator.swift in Sources */,
+				74170A02253706A7009808B5 /* CalendarCoordinator.swift in Sources */,
+				749CA0E3252BA392002ED035 /* ItemsCoordinator.swift in Sources */,
+				74422C86253847F50084CE46 /* NotificationNameExtension.swift in Sources */,
+				741709FD253705E9009808B5 /* CalendarViewModel.swift in Sources */,
 				749CA0FC252BA486002ED035 /* ItemsViewModel.swift in Sources */,
+				741709CA2536FCFD009808B5 /* SideBarViewModel.swift in Sources */,
+				741709C12536FCAB009808B5 /* SideBarViewController.swift in Sources */,
 				749CA10E252BA4D6002ED035 /* NibIdentifiable.swift in Sources */,
 				74347487252BA2A500F6F141 /* AppDelegate.swift in Sources */,
+				741709BA2536FA91009808B5 /* DailySplitCoordinator.swift in Sources */,
 				74347489252BA2A500F6F141 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

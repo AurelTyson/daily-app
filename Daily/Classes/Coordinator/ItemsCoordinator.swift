@@ -1,5 +1,5 @@
 //
-//  MainCoordinator.swift
+//  ItemsCoordinator.swift
 //  Daily
 //
 //  Created by Aurélien Tison on 05/10/2020.
@@ -8,7 +8,7 @@
 import UIKit
 import XCoordinator
 
-public enum MainRoute: Route {
+public enum ItemsRoute: Route {
     
     case items
     case addItem
@@ -18,7 +18,7 @@ public enum MainRoute: Route {
     
 }
 
-public final class MainCoordinator: NavigationCoordinator<MainRoute> {
+public final class ItemsCoordinator: NavigationCoordinator<ItemsRoute> {
     
     // MARK: Services
     
@@ -36,7 +36,7 @@ public final class MainCoordinator: NavigationCoordinator<MainRoute> {
     
     // MARK: NavigationCoordinator
     
-    override public func prepareTransition(for route: MainRoute) -> NavigationTransition {
+    override public func prepareTransition(for route: ItemsRoute) -> NavigationTransition {
         
         switch route {
         
