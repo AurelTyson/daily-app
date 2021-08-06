@@ -7,6 +7,8 @@ target 'Daily' do
   use_frameworks!
 
   # Pods for Daily
+  pod 'CalendarKit'
+  
   pod 'RxCocoa'
   pod 'RxSwift'
 

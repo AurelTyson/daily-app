@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17502"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -10,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CalendarViewController" customModule="Daily" customModuleProvider="target">
             <connections>
+                <outlet property="dayView" destination="YyL-7O-KBe" id="m7i-N8-Vz8"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -18,23 +20,46 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calendar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xkK-Qt-foB">
-                    <rect key="frame" x="173" y="437.5" width="68.5" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t0m-9V-4i8">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="113"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calendar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bxk-8c-sE2">
+                            <rect key="frame" x="20" y="64" width="102" height="29"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                            <color key="textColor" name="Black Coral"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="Bxk-8c-sE2" firstAttribute="leading" secondItem="t0m-9V-4i8" secondAttribute="leading" constant="20" id="Qer-lw-aqK"/>
+                        <constraint firstAttribute="bottom" secondItem="Bxk-8c-sE2" secondAttribute="bottom" constant="20" id="ciU-zU-pSQ"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YyL-7O-KBe" customClass="DayView" customModule="CalendarKit">
+                    <rect key="frame" x="20" y="133" width="374" height="709"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="xkK-Qt-foB" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="mLH-Tv-usL"/>
-                <constraint firstItem="xkK-Qt-foB" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="ygb-p9-fKS"/>
+                <constraint firstItem="YyL-7O-KBe" firstAttribute="top" secondItem="t0m-9V-4i8" secondAttribute="bottom" constant="20" id="6Pc-XC-nqp"/>
+                <constraint firstItem="YyL-7O-KBe" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="DEd-wB-SlA"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="YyL-7O-KBe" secondAttribute="trailing" constant="20" id="HOI-iO-m4Q"/>
+                <constraint firstItem="t0m-9V-4i8" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="KVI-DV-KsE"/>
+                <constraint firstItem="Bxk-8c-sE2" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="VEZ-sW-O3b"/>
+                <constraint firstItem="t0m-9V-4i8" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="aIP-Jn-LAj"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="YyL-7O-KBe" secondAttribute="bottom" constant="20" id="laR-bz-oOx"/>
+                <constraint firstItem="t0m-9V-4i8" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="wT2-ye-RdD"/>
             </constraints>
-            <point key="canvasLocation" x="132" y="78"/>
+            <point key="canvasLocation" x="131.8840579710145" y="77.678571428571431"/>
         </view>
     </objects>
     <resources>
+        <namedColor name="Black Coral">
+            <color red="0.29803921568627451" green="0.36078431372549019" blue="0.40784313725490196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

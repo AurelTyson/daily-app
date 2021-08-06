@@ -1,4 +1,7 @@
 PODS:
+  - CalendarKit (0.13.13):
+    - DateToolsSwift
+  - DateToolsSwift (5.0.0)
   - RxCocoa (5.1.1):
     - RxRelay (~> 5)
     - RxSwift (~> 5)
@@ -10,23 +13,28 @@ PODS:
   - XCoordinator/Core (2.0.7)
 
 DEPENDENCIES:
+  - CalendarKit
   - RxCocoa
   - RxSwift
   - XCoordinator
 
 SPEC REPOS:
   trunk:
+    - CalendarKit
+    - DateToolsSwift
     - RxCocoa
     - RxRelay
     - RxSwift
     - XCoordinator
 
 SPEC CHECKSUMS:
+  CalendarKit: 54944443a5cbd633a533b971408b00e879f54a7d
+  DateToolsSwift: 4207ada6ad615d8dc076323d27037c94916dbfa6
   RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
   RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
   RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
   XCoordinator: 9ee654fedef1ffede33d5c11677708a555c00542
 
-PODFILE CHECKSUM: bd08050aa42a0fa15f428dd5438e02e2255b14cd
+PODFILE CHECKSUM: 27f699ea0ab7e571564049d9530ad912b80837e2
 
 COCOAPODS: 1.10.0.rc.1

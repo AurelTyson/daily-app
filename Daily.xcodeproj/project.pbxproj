@@ -83,6 +83,7 @@
 		743474AA252BA2A800F6F141 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		74422C85253847F50084CE46 /* NotificationNameExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationNameExtension.swift; sourceTree = "<group>"; };
 		74422C90253866420084CE46 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		74422D062538A5A70084CE46 /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.0.sdk/System/Library/Frameworks/EventKit.framework; sourceTree = DEVELOPER_DIR; };
 		749CA0D3252BA35F002ED035 /* Daily.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Daily.entitlements; sourceTree = "<group>"; };
 		749CA0E2252BA392002ED035 /* ItemsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsCoordinator.swift; sourceTree = "<group>"; };
 		749CA0EB252BA3FD002ED035 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
@@ -133,6 +134,7 @@
 		471262F83CEB786372269705 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				74422D062538A5A70084CE46 /* EventKit.framework */,
 				F50B7EB49C5FA836D08688A4 /* Pods_Daily.framework */,
 				82B9A20AB9D383357E7D7334 /* Pods_Daily_DailyUITests.framework */,
 				3DDDE70812E0C2DF450526F0 /* Pods_DailyTests.framework */,

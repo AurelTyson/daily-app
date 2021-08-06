@@ -5,6 +5,7 @@
 //  Created by Aurélien Tison on 14/10/2020.
 //
 
+import CalendarKit
 import RxCocoa
 import RxSwift
 import UIKit
@@ -14,6 +15,8 @@ public final class CalendarViewController: UIViewController, BindableType {
     // MARK: Constants
     
     // MARK: Graphic attributes
+    
+    @IBOutlet private weak var dayView: DayView!
     
     // MARK: Attributes
     
@@ -25,6 +28,15 @@ public final class CalendarViewController: UIViewController, BindableType {
     
     override public func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Calendar style
+        var calendarStyle = CalendarStyle()
+        calendarStyle.header.backgroundColor = .white
+        self.dayView.updateStyle(calendarStyle)
+        
+        // Calendar configuration
+        self.dayView.autoScrollToFirstEvent = true
+        
     }
     
     // MARK: Bind
